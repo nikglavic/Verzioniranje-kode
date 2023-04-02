@@ -3,6 +3,11 @@ import numpy as np
 import matplotlib.pyplot as plt
 import tkinter as tk
 
+def my_roberts(slika):
+    
+    return slika_robov 
+
+
 imgGray = cv2.imread('lenna.png',0)
 
 cv2.namedWindow("Slika")
