@@ -11,6 +11,10 @@ def my_prewitt(slika):
     #vaša implementacija
     return slika_robov 
 
+def my_sobel(slika):
+    #vaša implementacija
+    return slika_robov 
+
 imgGray = cv2.imread('lenna.png',0)
 
 cv2.namedWindow("Slika")
