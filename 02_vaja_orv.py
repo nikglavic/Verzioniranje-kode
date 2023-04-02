@@ -58,12 +58,15 @@ def my_sobel(slika):
     return slika_robov 
 
 def canny(slika, sp_prag, zg_prag):
-    
+    slika_robov=cv2.Canny(slika, sp_prag, zg_prag)
+
     return slika_robov 
 
 imgGray = cv2.imread('lenna.png',0)
 
 cv2.namedWindow("Slika")
-cv2.imshow("Slika", my_sobel(imgGray))
+cv2.imshow("Slika", canny(imgGray, 20, 400))
+cv2.namedWindow("Slika2")
+cv2.imshow("Slika2", canny(imgGray, 65, 100))
 cv2.waitKey()
 cv2.destroyAllWindows()
