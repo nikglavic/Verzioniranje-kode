@@ -5,8 +5,11 @@ import tkinter as tk
 
 def my_roberts(slika):
     
-    return slika_robov 
+    return slika_robov
 
+def my_prewitt(slika):
+    #vaša implementacija
+    return slika_robov 
 
 imgGray = cv2.imread('lenna.png',0)
 
