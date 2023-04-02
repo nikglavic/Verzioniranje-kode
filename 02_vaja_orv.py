@@ -62,11 +62,16 @@ def canny(slika, sp_prag, zg_prag):
 
     return slika_robov 
 
+def spremeni_kontrast(slika, alfa, beta):
+    for i in range(0, slika.shape[0]):
+        for j in range(0, slika.shape[1]):
+            slika[i,j]=alfa*slika[i,j]+beta
+    return slika
+
 imgGray = cv2.imread('lenna.png',0)
 
 cv2.namedWindow("Slika")
-cv2.imshow("Slika", canny(imgGray, 20, 400))
-cv2.namedWindow("Slika2")
-cv2.imshow("Slika2", canny(imgGray, 65, 100))
+cv2.imshow("Slika", canny(imgGray, 65, 100))
+cv2.imshow("Slika2", canny(spremeni_kontrast(imgGray, 6, 12), 65, 100))
 cv2.waitKey()
 cv2.destroyAllWindows()
